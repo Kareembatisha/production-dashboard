@@ -221,6 +221,12 @@ const Navdata = () => {
           parentId: "dashboard",
         },
         {
+          id: "GroubDataTable",
+          label: "Group",
+          link: "/groubtDataTable",
+          parentId: "dashboard",
+        },
+        {
           id: "systemboard",
           label: "Systemboard",
           link: "/systemboard",
@@ -244,9 +250,32 @@ const Navdata = () => {
           link: "/feedbackReport",
           parentId: "dashboard",
         },
+        {
+          id: "RolePage",
+          label: "Role",
+          link: "/role",
+          parentId: "dashboard",
+        },
+        {
+          id: "TaskList",
+          label: "Task List",
+          link: "/taskList",
+          parentId: "dashboard",
+        },
+        {
+          id: "AttendanceList ",
+          label: "Attendance List ",
+          link: "/attendanceList",
+          parentId: "dashboard",
+        },
+        {
+          id: "DashboardNew ",
+          label: "Dashboard New",
+          link: "/dashboardNew",
+          parentId: "dashboard",
+        },
       ],
     },
-   
   ];
   return <React.Fragment>{menuItems}</React.Fragment>;
 };

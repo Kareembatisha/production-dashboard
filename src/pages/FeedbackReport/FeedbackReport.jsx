@@ -9,6 +9,8 @@ import {
   Select,
   Typography,
   IconButton,
+  Box,
+  Grid,
 } from "@mui/material";
 import { Card, CardBody, Col, Container, Progress, Row } from "reactstrap";
 import PictureAsPdfOutlinedIcon from "@mui/icons-material/PictureAsPdfOutlined";
@@ -22,24 +24,23 @@ import DownloadIcon from "@mui/icons-material/Download";
 
 function FeedbackReport() {
   return (
-    <div className="page-content">
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          width: "100%",
-          marginBottom: "80px",
-        }}
+    <div style={{ overflow: "hidden" }} className="page-content">
+      <Box
+        display="flex"
+        flexDirection={{ xs: "column", md: "row" }}
+        alignItems="center"
+        justifyContent="space-between"
+        width="100%"
+        mb={8} // MarginBottom (theme.spacing(8))
       >
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            justifyContent: "center",
-            width: "50%",
-          }}
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems={{ xs: "center", md: "flex-start" }}
+          justifyContent="center"
+          width={{ xs: "100%", md: "50%" }}
+          textAlign={{ xs: "center", md: "left" }}
+          mb={{ xs: 2, md: 0 }} // MarginBottom (theme.spacing(2)) for smaller screens
         >
           <BreadCrumb
             filter={false}
@@ -49,14 +50,14 @@ function FeedbackReport() {
           <Container>
             <Typography
               variant="subtitle2"
-              color={"#818991"}
-              style={{ marginTop: "-20px" }}
+              color="#818991"
+              mt={{ xs: -1, md: -2 }} // MarginTop (theme.spacing(-1)) for smaller screens
             >
               this reporting service generates reports on feedback metrics.
             </Typography>
           </Container>
-        </div>
-        <div style={{ display: "flex", gap: "11px" }}>
+        </Box>
+        <Box display="flex" justifyContent={"flex-end"} gap={1.5}>
           <Button
             variant="contained"
             color="primary"
@@ -71,8 +72,8 @@ function FeedbackReport() {
           >
             <Typography variant="button">Download XLSX</Typography>
           </Button>
-        </div>
-      </div>
+        </Box>
+      </Box>
       <Row style={{ marginTop: "30px", marginBottom: "30px" }}>
         <div
           style={{
@@ -83,40 +84,49 @@ function FeedbackReport() {
             width: "100%",
           }}
         >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              maxWidth: "80%",
-              gap: "10px",
-              marginBottom: "20px",
-            }}
+          <Box
+            display="flex"
+            alignItems="center"
+            justifyContent="space-between"
+            maxWidth="100%"
+            gap={1} // Gap between items
+            mb={2} // MarginBottom (theme.spacing(2))
+            flexDirection={{ xs: "column", sm: "row" }} // Stack vertically on small screens
           >
-            <div style={{ display: "flex", gap: "20px" }}>
+            <Box
+              display="flex"
+              justifyContent={"center"}
+              gap={2}
+              flexWrap="wrap"
+              mb={{ xs: 2, sm: 0 }}
+            >
               <Typography>
                 Building:{" "}
                 <span style={{ color: "#4444ff" }}>King ABDULLAH</span>
               </Typography>
               <Typography>
-                Created by : <span style={{ color: "#4444ff" }}>Kareem</span>
+                Created by: <span style={{ color: "#4444ff" }}>Kareem</span>
               </Typography>
               <Typography>
-                Created on :{" "}
+                Created on:{" "}
                 <span style={{ color: "#4444ff" }}>26/8/2024 13:22:54</span>
               </Typography>
               <Typography>
-                Date Range :{" "}
+                Date Range:{" "}
                 <span style={{ color: "#4444ff" }}>01 Aug 24-26 Aug 24</span>
               </Typography>
-            </div>
-            <Button variant="contained" color="primary">
+            </Box>
+            <Button
+              sx={{ padding: "10px 20px" }}
+              variant="contained"
+              color="primary"
+            >
               <Typography variant="button">KPI Calculation</Typography>
             </Button>
-          </div>
-          <div style={{ display: "flex", width: "80%", gap: "30px" }}>
+          </Box>
+          <Row style={{ width: "100%" }} className="mb-3 mx-auto">
             <Widgetstaps />
-          </div>
+          </Row>
         </div>
       </Row>
       <Row style={{ marginTop: "30px", marginBottom: "30px" }}>
@@ -220,102 +230,104 @@ function FeedbackReport() {
           </Card>
         </Paper>
       </Row>
-      <Row style={{ marginTop: "30px", marginBottom: "30px" }}>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            marginBottom: "30px",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "flex-start",
-              justifyContent: "center",
-              minWidth: "50%",
-            }}
-          >
-            <BreadCrumb
-              filter={false}
-              title="Lowest Performing Zones"
-              pageTitle=""
-            />
-          </div>
+      <Box
+        mt={4} // MarginTop (theme.spacing(4))
+        mb={7} // MarginBottom (theme.spacing(4))
+      >
+        <Grid container spacing={2} mb={4}>
+          <Grid item xs={12} md={6}>
+            <Box
+              display="flex"
+              alignItems="flex-start"
+              justifyContent="center"
+              minWidth="100%"
+            >
+              <BreadCrumb
+                filter={false}
+                title="Lowest Performing Zones"
+                pageTitle=""
+              />
+            </Box>
+          </Grid>
 
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center", // Align items center vertically
-              gap: "10px", // Add some spacing between the select and button
-            }}
-          >
-            <FormControl variant="outlined" style={{ minWidth: "200px" }}>
-              <InputLabel id="negative-reason-label">
-                Negative Reason
-              </InputLabel>
-              <Select labelId="negative-reason-label" label="Negative Reason">
-                <MenuItem value="No Toilet paper/paper Towel">
-                  No Toilet paper/paper Towel
-                </MenuItem>
-                <MenuItem value="Dirty Washroom">Dirty Washroom</MenuItem>
-                <MenuItem value="Broken Fixtures">Broken Fixtures</MenuItem>
-              </Select>
-            </FormControl>
-            <IconButton color="primary">
-              <DownloadIcon />
-            </IconButton>
-          </div>
-        </div>
+          <Grid item xs={12} md={6}>
+            <Box
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              gap={1} // Gap between elements
+            >
+              <FormControl variant="outlined" sx={{ minWidth: 200 }}>
+                <InputLabel id="negative-reason-label">
+                  Negative Reason
+                </InputLabel>
+                <Select labelId="negative-reason-label" label="Negative Reason">
+                  <MenuItem value="No Toilet paper/paper Towel">
+                    No Toilet paper/paper Towel
+                  </MenuItem>
+                  <MenuItem value="Dirty Washroom">Dirty Washroom</MenuItem>
+                  <MenuItem value="Broken Fixtures">Broken Fixtures</MenuItem>
+                </Select>
+              </FormControl>
+              <IconButton color="primary">
+                <DownloadIcon />
+              </IconButton>
+            </Box>
+          </Grid>
+        </Grid>
 
         <SearchTable />
-      </Row>
-      <Row style={{ marginTop: "30px", marginBottom: "30px" }}>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            marginBottom: "30px",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-              justifyContent: "center",
-              maxWidth: "60%",
-            }}
+      </Box>
+      <Box
+        mt={4} // MarginTop (theme.spacing(4))
+        mb={4} // MarginBottom (theme.spacing(4))
+      >
+        <Grid container spacing={2} mb={4}>
+          <Grid item xs={12} md={8}>
+            <Box
+              display="flex"
+              flexDirection="column"
+              alignItems="flex-start"
+              justifyContent="center"
+              maxWidth="100%"
+            >
+              <BreadCrumb
+                filter={false}
+                title="Feedback Reasons"
+                pageTitle=""
+              />
+              <Typography
+                variant="subtitle2"
+                color="#818991"
+                sx={{ mt: -2, textAlign: "start", px: 1.5 }}
+              >
+                This chart displays the distribution of feedback reasons
+                reported in the selected time range.
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            md={4}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
           >
-            <BreadCrumb filter={false} title="Feedback Reasons" pageTitle="" />
+            <Box display="flex">
+              <Select
+                value="All Reasons"
+                sx={{ mb: 2, mt: 2, ml: "auto", minWidth: 120 }}
+              >
+                <MenuItem value="All Reasons">All Reasons</MenuItem>
+                {/* Add more options if needed */}
+              </Select>
+            </Box>
+          </Grid>
+        </Grid>
 
-            <Typography
-              variant="subtitle2"
-              color={"#818991"}
-              style={{
-                marginTop: "-20px",
-                textAlign: "start",
-                padding: "0px 12px",
-              }}
-            >
-              This chart displays the distribution of feedback reasons reported
-              in the selected time range.
-            </Typography>
-          </div>
-          <div style={{ display: "flex", alignItems: "flex-end" }}>
-            <Select
-              value="All Reasons"
-              sx={{ marginBottom: 2, marginTop: 2, marginLeft: "auto" }}
-            >
-              <MenuItem value="All Reasons">All Reasons</MenuItem>
-              {/* Add more options if needed */}
-            </Select>
-          </div>
-        </div>
         <ChartTable />
-      </Row>
+      </Box>
     </div>
   );
 }

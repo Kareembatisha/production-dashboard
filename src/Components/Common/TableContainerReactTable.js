@@ -131,126 +131,81 @@ const TableContainer = ({
     <Fragment>
       {isGlobalFilter && (
         <Row className="mb-3">
-          
-            <CardBody className="border border-dashed border-end-0 border-start-0">
-              <form>
-                <Row>
-                  <Col sm={5}>
-                    <div className="search-box me-2 mb-2 d-inline-block col-12">
-                      <DebouncedInput
-                        value={globalFilter ?? ""}
-                        onChange={(value) => setGlobalFilter(value)}
-                        placeholder={SearchPlaceholder}
-                      />
-                      <i className="bx bx-search-alt search-icon"></i>
-                    </div>
-                  </Col>
-                </Row>
-              </form>
-            </CardBody>
-          
+          <CardBody className="border border-dashed border-end-0 border-start-0">
+            <form>
+              <Row>
+                <Col sm={5}>
+                  <div className="search-box me-2 mb-2 d-inline-block col-12">
+                    <DebouncedInput
+                      value={globalFilter ?? ""}
+                      onChange={(value) => setGlobalFilter(value)}
+                      placeholder={SearchPlaceholder}
+                    />
+                    <i className="bx bx-search-alt search-icon"></i>
+                  </div>
+                </Col>
+              </Row>
+            </form>
+          </CardBody>
         </Row>
       )}
 
-      
-        <div className={divClass}>
-          <Table hover className={tableClass}>
-            <thead className={theadClass}>
-              {getHeaderGroups().map((headerGroup) => (
-                <tr className={trClass} key={headerGroup.id}>
-                  {headerGroup.headers.map((header) => (
-                    <th
-                      key={header.id}
-                      className={thClass}
-                      {...{
-                        onClick: header.column.getToggleSortingHandler(),
-                      }}
-                    >
-                      {header.isPlaceholder ? null : (
-                        <React.Fragment>
-                          {flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
-                          {{
-                            asc: " ",
-                            desc: " ",
-                          }[header.column.getIsSorted()] ?? null}
-                          {header.column.getCanFilter() ? (
-                            <div>
-                              <Filter column={header.column} table={table} />
-                            </div>
-                          ) : null}
-                        </React.Fragment>
-                      )}
-                    </th>
-                  ))}
-                </tr>
-              ))}
-            </thead>
-
-            <tbody>
-              {getRowModel().rows.map((row) => {
-                return (
-                  <tr key={row.id}>
-                    {row.getVisibleCells().map((cell) => {
-                      return (
-                        <td key={cell.id}>
-                          {flexRender(
-                            cell.column.columnDef.cell,
-                            cell.getContext()
-                          )}
-                        </td>
-                      );
-                    })}
-                  </tr>
-                );
-              })}
-            </tbody>
-          </Table>
-        </div>
-      
-
-      <Row className="align-items-center mt-2 g-3 text-center text-sm-start">
-        <div className="col-sm"></div>
-        <div className="col-sm-auto">
-          <ul className="pagination pagination-separated pagination-md justify-content-center justify-content-sm-start mb-0">
-            <li
-              className={
-                !getCanPreviousPage() ? "page-item disabled" : "page-item"
-              }
-            >
-              <Link to="#" className="page-link" onClick={previousPage}>
-                Previous
-              </Link>
-            </li>
-            {getPageOptions().map((item, key) => (
-              <React.Fragment key={key}>
-                <li className="page-item">
-                  <Link
-                    to="#"
-                    className={
-                      getState().pagination.pageIndex === item
-                        ? "page-link active"
-                        : "page-link"
-                    }
-                    onClick={() => setPageIndex(item)}
+      <div className={divClass}>
+        <Table hover className={tableClass}>
+          <thead className={theadClass}>
+            {getHeaderGroups().map((headerGroup) => (
+              <tr className={trClass} key={headerGroup.id}>
+                {headerGroup.headers.map((header) => (
+                  <th
+                    key={header.id}
+                    className={thClass}
+                    {...{
+                      onClick: header.column.getToggleSortingHandler(),
+                    }}
                   >
-                    {item + 1}
-                  </Link>
-                </li>
-              </React.Fragment>
+                    {header.isPlaceholder ? null : (
+                      <React.Fragment>
+                        {flexRender(
+                          header.column.columnDef.header,
+                          header.getContext()
+                        )}
+                        {{
+                          asc: " ",
+                          desc: " ",
+                        }[header.column.getIsSorted()] ?? null}
+                        {header.column.getCanFilter() ? (
+                          <div>
+                            <Filter column={header.column} table={table} />
+                          </div>
+                        ) : null}
+                      </React.Fragment>
+                    )}
+                  </th>
+                ))}
+              </tr>
             ))}
-            <li
-              className={!getCanNextPage() ? "page-item disabled" : "page-item"}
-            >
-              <Link to="#" className="page-link" onClick={nextPage}>
-                Next
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </Row>
+          </thead>
+
+          <tbody>
+            {getRowModel().rows.map((row) => {
+              return (
+                <tr key={row.id}>
+                  {row.getVisibleCells().map((cell) => {
+                    return (
+                      <td key={cell.id}>
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )}
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
+      </div>
     </Fragment>
   );
 };

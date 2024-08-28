@@ -1,8 +1,13 @@
 import React, { useEffect, useMemo, useState } from "react";
 import TableContainer from "../../Components/Common/TableContainerReactTable";
-import { FormControl, IconButton, InputLabel, MenuItem, Select } from "@mui/material";
-import DownloadIcon from '@mui/icons-material/Download';
-
+import {
+  FormControl,
+  IconButton,
+  InputLabel,
+  MenuItem,
+  Select,
+} from "@mui/material";
+import DownloadIcon from "@mui/icons-material/Download";
 
 const SearchTable = () => {
   const searchTable = [
@@ -52,7 +57,6 @@ const SearchTable = () => {
 
   return (
     <React.Fragment>
-
       <TableContainer
         columns={columns || []}
         data={searchTable || []}

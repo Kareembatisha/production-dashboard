@@ -56,6 +56,11 @@ import SystemBoard from "../pages/SystemBoard/SystemBoard.jsx";
 import UserInformation from "../pages/UserInformation/UserInformation.jsx";
 import FeedbackReport from "../pages/FeedbackReport/FeedbackReport.jsx";
 import DashboardEcommerce from "../pages/DashboardEcommerce/index.js";
+import RolePage from "../pages/RolePage/RolePage.jsx";
+import Group from "../pages/DataTables/Group/Group.jsx";
+import TaskList from "../pages/TaskList/TaskList.jsx";
+import AttendanceList from "../pages/AttendanceList/AttendanceList.jsx";
+import DashboardNew from "../pages/DashboardNew/DashboardNew.jsx";
 
 const authProtectedRoutes = [
   { path: "/buildingTable", component: <BuildingTable /> },
@@ -72,14 +77,17 @@ const authProtectedRoutes = [
   { path: "/cityDataTable", component: <City /> },
   { path: "/countryDataTable", component: <Country /> },
   { path: "/shiftDataTable", component: <Shift /> },
+  { path: "/groubtDataTable", component: <Group /> },
   { path: "/supervisorDataTable", component: <Supervisor /> },
   { path: "/userDataTable", component: <User /> },
   { path: "/systemboard", component: <SystemBoard /> },
   { path: "/userinformation", component: <UserInformation /> },
   { path: "/feedbackReport", component: <FeedbackReport /> },
   { path: "/dashboard", component: <DashboardEcommerce /> },
-
-
+  { path: "/role", component: <RolePage /> },
+  { path: "/taskList", component: <TaskList /> },
+  { path: "/attendanceList", component: <AttendanceList /> },
+  { path: "/dashboardNew", component: <DashboardNew /> },
 
   //User Profile
   { path: "/profile", component: <UserProfile /> },

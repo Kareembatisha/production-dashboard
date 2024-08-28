@@ -30,7 +30,7 @@ const linkStyle = {
 
 const UserDashboard = () => {
   return (
-    <div style={{overflow:"hidden"}} className="page-content">
+    <div style={{ overflow: "hidden" }} className="page-content">
       <BreadCrumb filter={true} title="User Dashboard" pageTitle="Dashboards" />
       <Row className="mb-3 mx-auto">
         <Widgetstaps />
@@ -45,7 +45,10 @@ const UserDashboard = () => {
       </Row>
       <Row>
         <Col xl={6} xs={12}>
-          <RecentOrders name="Daily Attendance Summary" coloums={["Name",'Check In','Check Out','Status']} />
+          <RecentOrders
+            name="Daily Attendance Summary"
+            coloums={["Name", "Check In", "Check Out", "Status"]}
+          />
         </Col>
         <Col xl={6} xs={12}>
           <Card>
@@ -156,7 +159,10 @@ const UserDashboard = () => {
           <Revenue name="Logged Hours Distribution" />
         </Col>
         <Col xl={6} xs={12}>
-        <RecentOrders name="Time Tracking Summary" coloums={["Name",'Schedules Hrs','Logged Hrs','Status']} />
+          <RecentOrders
+            name="Time Tracking Summary"
+            coloums={["Name", "Schedules Hrs", "Logged Hrs", "Status"]}
+          />
         </Col>
       </Row>
     </div>

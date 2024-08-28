@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getRevenueChartsData } from "../../slices/thunks";
 import { createSelector } from "reselect";
 
-const Revenue = ({ name }) => {
+const Revenue = ({name}) => {
   const dispatch = useDispatch();
 
   const [chartData, setchartData] = useState([]);
@@ -21,6 +21,8 @@ const Revenue = ({ name }) => {
     setchartData(revenueData);
   }, [revenueData]);
 
+
+
   useEffect(() => {
     dispatch(getRevenueChartsData("all"));
   }, [dispatch]);
@@ -28,8 +30,11 @@ const Revenue = ({ name }) => {
   return (
     <React.Fragment>
       <Card>
+      
+
         <CardHeader className="p-0 border-0 bg-light-subtle">
-          <h4>{name}</h4>
+          <h3>{name}</h3>
+      
         </CardHeader>
 
         <CardBody className="p-0 pb-2">
@@ -37,7 +42,7 @@ const Revenue = ({ name }) => {
             <div dir="ltr">
               <RevenueCharts
                 series={chartData}
-                dataColors='[ "--vz-primary"]'
+                dataColors='["--vz-info", "--vz-primary"]'
               />
             </div>
           </div>

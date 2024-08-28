@@ -83,6 +83,75 @@ const ecomWidgets = [
     // suffix: "k"
   },
 ];
+const newWidgets = [
+  {
+    id: 1,
+    cardColor: "primary",
+    label: "Total Footfall (Today)",
+    badge: "ri-arrow-right-up-line",
+    badgeClass: "white",
+    // percentage: "+16.24",
+    counter: "474",
+    link: "View Building list",
+    to: "/buildingTable",
+    bgcolor: "light",
+    icon: "bx bx-dollar-circle",
+    decimals: 0,
+    prefix: "",
+    // suffix: "k"
+  },
+  {
+    id: 2,
+    cardColor: "secondary",
+    label: "Total Footfall (Month)",
+    badge: "ri-arrow-right-down-line",
+    badgeClass: "white",
+    // percentage: "-3.57",
+    counter: "28675",
+    link: "View Incidents list",
+    to: "/incidentTable",
+    bgcolor: "info",
+    icon: "bx bx-shopping-bag",
+    decimals: 0,
+    prefix: "",
+    // separator: ",",
+    // suffix: ""
+  },
+  {
+    id: 3,
+    cardColor: "success",
+    label: "Average Daily Footfall",
+    badge: "ri-arrow-right-up-line",
+    badgeClass: "white",
+    // percentage: "+29.08",
+    counter: "1024",
+    link: "View Floor list",
+    to: "/floorTable",
+    bgcolor: "warning",
+    icon: "bx bx-user-circle",
+    decimals: 0,
+    prefix: "",
+    // suffix: "M"
+  },
+];
+const feedback = [
+  {
+    id: 3,
+    cardColor: "success",
+    label: "Total Feedbacks (Month)",
+    badge: "ri-arrow-right-up-line",
+    badgeClass: "white",
+    // percentage: "+29.08",
+    counter: "1656",
+    link: "View Floor list",
+    to: "/floorTable",
+    bgcolor: "warning",
+    icon: "bx bx-user-circle",
+    decimals: 0,
+    prefix: "",
+    // suffix: "M"
+  },
+];
 const userTasks = [
   {
     id: 1,
@@ -429,6 +498,9 @@ const recentOrders = [
     statusClass: "success",
     rating: 5,
     votes: "61",
+    Attachment: "--",
+    Status: "--",
+    time: "--",
   },
   {
     id: 2,
@@ -442,6 +514,9 @@ const recentOrders = [
     statusClass: "warning",
     rating: 4.5,
     votes: "61",
+    Attachment: "--",
+    Status: "--",
+    time: "--",
   },
   {
     id: 3,
@@ -455,6 +530,9 @@ const recentOrders = [
     statusClass: "success",
     rating: 4.9,
     votes: "89",
+    Attachment: "--",
+    Status: "--",
+    time: "--",
   },
   {
     id: 4,
@@ -468,6 +546,9 @@ const recentOrders = [
     statusClass: "danger",
     rating: 4.3,
     votes: "47",
+    Attachment: "--",
+    Status: "--",
+    time: "--",
   },
   {
     id: 5,
@@ -481,6 +562,19 @@ const recentOrders = [
     statusClass: "success",
     rating: 4.7,
     votes: "161",
+    Attachment: "--",
+    Status: "--",
+    time: "--",
+  },
+];
+const topLocations = [
+  {
+    name: "Male Public Washroom",
+    TotalCount: "387",
+  },
+  {
+    name: "Female Public Washroom",
+    TotalCount: "87",
   },
 ];
 
@@ -635,4 +729,7 @@ export {
   yearRevenueData,
   userTasks,
   userInformation,
+  newWidgets,
+  topLocations,
+  feedback
 };

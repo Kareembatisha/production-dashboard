@@ -64,7 +64,7 @@ const BreadCrumb = ({ title, pageTitle, filter }) => {
                       key={filterOption}
                       color={activeFilter === filterOption ? "primary" : "secondary"}
                       onClick={() => handleFilterClick(filterOption)}
-                      style={{ width: '100%', textAlign: 'left', fontSize: '11px' }}
+                      style={{ width: '100%', textAlign: 'left', fontSize: '11px',marginBottom:"1px" }}
                     >
                       {filterOption.replace(/-/g, " ").toUpperCase()}
                     </Button>
