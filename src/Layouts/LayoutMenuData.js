@@ -280,12 +280,12 @@ const Navdata = () => {
           link: "/teamManagement",
           parentId: "dashboard",
         },
-        // {
-        //   id: "TimeSheet ",
-        //   label: "Time Sheet",
-        //   link: "/timeSheet",
-        //   parentId: "dashboard",
-        // },
+        {
+          id: "TimeSheet ",
+          label: "Time Sheet",
+          link: "/timeSheet",
+          parentId: "dashboard",
+        },
         {
           id: "MetricsReport ",
           label: "Metrics Report",
