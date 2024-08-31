@@ -8,7 +8,7 @@ import logoLight from "../../../assets/images/logo-light.png";
 import aiLogo from "../../../assets/images/ai-cloud-logo.svg";
 
 const BasicTwosVerify = () => {
-    document.title = "Two Step Verification | Velzon - React Admin & Dashboard Template";
+    document.title = "Two Step Verification ";
 
     const getInputElement = (index) => {
         return document.getElementById('digit' + index + '-input');

@@ -38,7 +38,7 @@ import SwiperCore from "swiper";
 import { SearchGallery, news, video, swiper } from "../../../common/data";
 
 const SearchResults = () => {
-  document.title = "Search Results | Velzon - React Admin & Dashboard Template";
+  document.title = "Search Results ";
   SwiperCore.use([Autoplay]);
 
   //Tab

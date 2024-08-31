@@ -7,7 +7,7 @@ import ParticlesAuth from "../ParticlesAuth";
 import aiLogo from "../../../assets/images/ai-cloud-logo.svg";
 
 const BasicSuccessMsg = () => {
-    document.title="Success Message | Velzon - React Admin & Dashboard Template";
+    document.title="Success Message ";
 
     return (
         <React.Fragment>

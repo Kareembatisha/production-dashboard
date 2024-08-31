@@ -7,7 +7,7 @@ import ParticlesAuth from "../ParticlesAuth";
 import aiLogo from "../../../assets/images/ai-cloud-logo.svg";
 
 const BasicLogout = () => {
-    document.title="Log Out | Velzon - React Admin & Dashboard Template";
+    document.title="Log Out ";
 
     return (
         <React.Fragment>

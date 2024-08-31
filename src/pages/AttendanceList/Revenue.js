@@ -42,7 +42,7 @@ const Revenue = ({name}) => {
             <div dir="ltr">
               <RevenueCharts
                 series={chartData}
-                dataColors='["--vz-info", "--vz-primary"]'
+                dataColors='["--vz-info", "--vz-primary", "--vz-warning"]'
               />
             </div>
           </div>

@@ -19,13 +19,15 @@ const RecentOrders = () => {
 
           <CardBody>
             <div className="table-responsive table-card">
-              <table className="table table-borderless table-centered align-middle table-nowrap mb-0">
+              <table
+                style={{ textAlign: "center" }}
+                className="table table-borderless table-centered align-middle table-nowrap mb-0"
+              >
                 <thead className="text-muted table-light">
                   <tr>
                     <th scope="col"> ID</th>
                     <th scope="col">Task Name</th>
                     <th scope="col">Assign to</th>
-                    <th scope="col">Type</th>
                     <th scope="col">Date</th>
                     <th scope="col">Priority</th>
                     <th scope="col">Zone</th>
@@ -52,19 +54,10 @@ const RecentOrders = () => {
                       </td>
                       <td>
                         <div className="d-flex align-items-center">
-                          <div className="flex-shrink-0 me-2">
-                            <img
-                              src={item.img}
-                              alt=""
-                              className="avatar-xs rounded-circle"
-                            />
-                          </div>
                           <div className="flex-grow-1"> {item.product}</div>
                         </div>
                       </td>
-                      <td>
-                        <span className="text-success">${item.amount}</span>
-                      </td>
+
                       <td>{item.vendor}</td>
                       <td>
                         <span
@@ -74,32 +67,14 @@ const RecentOrders = () => {
                         </span>
                       </td>
                       <td>
-                        <h5 className="fs-14 fw-medium mb-0">
-                          <span className="text-muted fs-13 ms-1">
-                            {item.votes} 
-                          </span>
-                        </h5>
+                        <h5 className="fs-14 fw-medium mb-0">{item.rating}</h5>
                       </td>
-                      <td>
-                        <h5 className="fs-14 fw-medium mb-0">
-                          
-                          <span className="text-muted fs-13 ms-1">
-                            {item.Attachment} 
-                          </span>
-                        </h5>
-                      </td>
-                      <td>
-                        <h5 className="fs-14 fw-medium mb-0">
-                          
-                          <span className="text-muted fs-13 ms-1">
-                            {item.Status} 
-                          </span>
-                        </h5>
-                      </td>
+                      <td>--</td>
+                      <td>{item.status}</td>
                       <td>
                         <h5 className="fs-14 fw-medium mb-0">
                           <span className="text-muted fs-13 ms-1">
-                            {item.time} 
+                            {item.time}
                           </span>
                         </h5>
                       </td>

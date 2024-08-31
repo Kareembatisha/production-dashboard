@@ -55,12 +55,15 @@ import User from "../pages/DataTables/User/User.jsx";
 import SystemBoard from "../pages/SystemBoard/SystemBoard.jsx";
 import UserInformation from "../pages/UserInformation/UserInformation.jsx";
 import FeedbackReport from "../pages/FeedbackReport/FeedbackReport.jsx";
-import DashboardEcommerce from "../pages/DashboardEcommerce/index.js";
+import DashboardEcommerce from "../pages/Dashboard/index.js";
 import RolePage from "../pages/RolePage/RolePage.jsx";
 import Group from "../pages/DataTables/Group/Group.jsx";
 import TaskList from "../pages/TaskList/TaskList.jsx";
 import AttendanceList from "../pages/AttendanceList/AttendanceList.jsx";
-import DashboardNew from "../pages/DashboardNew/DashboardNew.jsx";
+import Optimus from "../pages/Optimus/Optimus.jsx";
+import TeamManagement from "../pages/TeamManagement/TeamManagement.jsx";
+import TimeSheet from "../pages/TimeSheet/TimeSheet.jsx";
+import MetricsReport from "../pages/MetricsReport/MetricsReport.jsx";
 
 const authProtectedRoutes = [
   { path: "/buildingTable", component: <BuildingTable /> },
@@ -87,7 +90,10 @@ const authProtectedRoutes = [
   { path: "/role", component: <RolePage /> },
   { path: "/taskList", component: <TaskList /> },
   { path: "/attendanceList", component: <AttendanceList /> },
-  { path: "/dashboardNew", component: <DashboardNew /> },
+  { path: "/optimus", component: <Optimus /> },
+  { path: "/teamManagement", component: <TeamManagement /> },
+  { path: "/timeSheet", component: <TimeSheet /> },
+  { path: "/metricsReport", component: <MetricsReport /> },
 
   //User Profile
   { path: "/profile", component: <UserProfile /> },

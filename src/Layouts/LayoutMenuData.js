@@ -154,8 +154,8 @@ const Navdata = () => {
       },
       subItems: [
         {
-          id: "ecommerce",
-          label: "Ecommerce",
+          id: "Dashboard",
+          label: "Dashboard",
           link: "/dashboard",
           parentId: "dashboard",
         },
@@ -269,9 +269,27 @@ const Navdata = () => {
           parentId: "dashboard",
         },
         {
-          id: "DashboardNew ",
-          label: "Dashboard New",
-          link: "/dashboardNew",
+          id: "Optimus ",
+          label: "Optimus",
+          link: "/optimus",
+          parentId: "dashboard",
+        },
+        {
+          id: "TeamManagement ",
+          label: "Team Management",
+          link: "/teamManagement",
+          parentId: "dashboard",
+        },
+        // {
+        //   id: "TimeSheet ",
+        //   label: "Time Sheet",
+        //   link: "/timeSheet",
+        //   parentId: "dashboard",
+        // },
+        {
+          id: "MetricsReport ",
+          label: "Metrics Report",
+          link: "/metricsReport",
           parentId: "dashboard",
         },
       ],

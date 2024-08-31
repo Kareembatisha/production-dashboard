@@ -4,9 +4,9 @@ import { useMediaQuery } from "@mui/material";
 
 const BreadCrumb = ({ title, pageTitle, filter }) => {
   const [activeFilter, setActiveFilter] = useState("today");
-  
+
   // Use media query to determine if the screen is small
-  const isMobileOrTablet = useMediaQuery('(max-width: 768px)');
+  const isMobileOrTablet = useMediaQuery("(max-width: 768px)");
 
   const handleFilterClick = (filter) => {
     setActiveFilter(filter);
@@ -23,21 +23,22 @@ const BreadCrumb = ({ title, pageTitle, filter }) => {
         {filter && (
           <Col xs={12} md={12} xl={6}>
             {isMobileOrTablet ? (
-              <div style={{ width: '100%' }}>
+              <div style={{ width: "100%" }}>
                 <Button
                   color="secondary"
                   style={{
-                    width: '100%',
-                    textAlign: 'left',
-                    fontSize: '11px',
-                    marginBottom: '5px',
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
+                    width: "100%",
+                    textAlign: "left",
+                    fontSize: "11px",
+                    marginBottom: "5px",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
                   }}
                   onClick={(e) => {
                     const menu = e.currentTarget.nextElementSibling;
-                    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+                    menu.style.display =
+                      menu.style.display === "block" ? "none" : "block";
                   }}
                 >
                   Filter Options
@@ -45,10 +46,10 @@ const BreadCrumb = ({ title, pageTitle, filter }) => {
                 </Button>
                 <div
                   style={{
-                    display: 'none',
-                    width: '100%',
-                    backgroundColor: '#fff',
-                    boxShadow: '0px 8px 16px rgba(0,0,0,0.2)',
+                    display: "none",
+                    width: "100%",
+                    backgroundColor: "#fff",
+                    boxShadow: "0px 8px 16px rgba(0,0,0,0.2)",
                     zIndex: 1,
                   }}
                 >
@@ -62,9 +63,16 @@ const BreadCrumb = ({ title, pageTitle, filter }) => {
                   ].map((filterOption) => (
                     <Button
                       key={filterOption}
-                      color={activeFilter === filterOption ? "primary" : "secondary"}
+                      color={
+                        activeFilter === filterOption ? "primary" : "secondary"
+                      }
                       onClick={() => handleFilterClick(filterOption)}
-                      style={{ width: '100%', textAlign: 'left', fontSize: '11px',marginBottom:"1px" }}
+                      style={{
+                        width: "100%",
+                        textAlign: "left",
+                        fontSize: "11px",
+                        marginBottom: "1px",
+                      }}
                     >
                       {filterOption.replace(/-/g, " ").toUpperCase()}
                     </Button>
@@ -72,7 +80,7 @@ const BreadCrumb = ({ title, pageTitle, filter }) => {
                 </div>
               </div>
             ) : (
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2px' }}>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: "2px" }}>
                 {[
                   "today",
                   "current-week",
@@ -83,9 +91,15 @@ const BreadCrumb = ({ title, pageTitle, filter }) => {
                 ].map((filterOption) => (
                   <Button
                     key={filterOption}
-                    color={activeFilter === filterOption ? "primary" : "secondary"}
+                    color={
+                      activeFilter === filterOption ? "primary" : "secondary"
+                    }
                     onClick={() => handleFilterClick(filterOption)}
-                    style={{ flex: '1 1 auto', fontSize: '11px', minWidth: '0' }}
+                    style={{
+                      flex: "1 1 auto",
+                      fontSize: "11px",
+                      minWidth: "0",
+                    }}
                   >
                     {filterOption.replace(/-/g, " ").toUpperCase()}
                   </Button>

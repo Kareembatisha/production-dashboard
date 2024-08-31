@@ -29,6 +29,7 @@ import { useFormik } from "formik";
 import { loginUser, socialLogin, resetLoginFlag } from "../../slices/thunks";
 
 import ailogo from "../../assets/images/ai-logo (3).png";
+import signIn from "../../assets/images/signIn.jpeg";
 import { createSelector } from "reselect";
 
 const Login = (props) => {

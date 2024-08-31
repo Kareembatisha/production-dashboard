@@ -218,6 +218,72 @@ const userTasks = [
     // suffix: "k"
   },
 ];
+const teamManagement = [
+  {
+    id: 1,
+    cardColor: "success",
+    label: "Active",
+    badge: "ri-arrow-right-up-line",
+    badgeClass: "white",
+    // percentage: "+16.24",
+    counter: "20",
+    link: "View Building list",
+    to: "/buildingTable",
+    bgcolor: "light",
+    icon: "bx bx-dollar-circle",
+    decimals: 0,
+    prefix: "",
+    // suffix: "k"
+  },
+  {
+    id: 2,
+    cardColor: "danger",
+    label: "Remaining",
+    badge: "ri-arrow-right-down-line",
+    badgeClass: "white",
+    // percentage: "-3.57",
+    counter: "1",
+    link: "View Incidents list",
+    to: "/incidentTable",
+    bgcolor: "info",
+    icon: "bx bx-shopping-bag",
+    decimals: 0,
+    prefix: "",
+    // separator: ",",
+    // suffix: ""
+  },
+  {
+    id: 3,
+    cardColor: "info",
+    label: "Pending",
+    badge: "ri-arrow-right-up-line",
+    badgeClass: "white",
+    // percentage: "+29.08",
+    counter: "0",
+    link: "View Floor list",
+    to: "/floorTable",
+    bgcolor: "warning",
+    icon: "bx bx-user-circle",
+    decimals: 0,
+    prefix: "",
+    // suffix: "M"
+  },
+  {
+    id: 4,
+    cardColor: "warning",
+    label: "Total",
+    badgeClass: "white",
+    // percentage: "+0.00",
+    counter: "21",
+    link: "View Zones list",
+    to: "/zoneTable",
+    bgcolor: "primary",
+    icon: "bx bx-wallet",
+    decimals: 0,
+    prefix: "",
+    // suffix: "k"
+  },
+];
 const userDashboard = [
   {
     id: 1,
@@ -283,6 +349,59 @@ const userDashboard = [
     prefix: "",
     // suffix: "k"
   },
+];
+const metricsReport = [
+  {
+    id: 1,
+    cardColor: "primary",
+    label: "Total Footfall",
+    badge: "ri-arrow-right-up-line",
+    badgeClass: "white",
+    // percentage: "+16.24",
+    counter: "19354",
+    link: "View Building list",
+    to: "/buildingTable",
+    bgcolor: "light",
+    icon: "bx bx-dollar-circle",
+    decimals: 0,
+    prefix: "",
+    // suffix: "k"
+  },
+  {
+    id: 2,
+    cardColor: "secondary",
+    label: "Peak HRS",
+    badge: "ri-arrow-right-down-line",
+    badgeClass: "white",
+    // percentage: "-3.57",
+    counter: "12",
+    link: "View Incidents list",
+    to: "/incidentTable",
+    bgcolor: "info",
+    icon: "bx bx-shopping-bag",
+    decimals: 0,
+    prefix: "",
+    // separator: ",",
+    // suffix: ""
+  },
+  {
+    id: 3,
+    cardColor: "success",
+    label: "Peak Day of week",
+    badge: "ri-arrow-right-up-line",
+    badgeClass: "white",
+    // percentage: "+29.08",
+    counter: "1835",
+    day:"Thu",
+    link: "View Floor list",
+    to: "/floorTable",
+    bgcolor: "warning",
+    icon: "bx bx-user-circle",
+    decimals: 0,
+    prefix: "",
+    // suffix: "M"
+  },
+
 ];
 const userInformation = [
   {
@@ -489,82 +608,72 @@ const recentOrders = [
   {
     id: 1,
     orderId: "#VZ2112",
-    img: avatar1,
     name: "Alex Smith",
-    product: "Clothes",
-    amount: 109.0,
-    vendor: "Zoetic Fashion",
-    status: "Paid",
+    product: "mohammed",
+
+    vendor: "22-5-2024",
+    status: "High",
     statusClass: "success",
     rating: 5,
-    votes: "61",
-    Attachment: "--",
+    
     Status: "--",
-    time: "--",
+    time: "6:00 PM",
   },
   {
     id: 2,
     orderId: "#VZ2111",
-    img: avatar2,
     name: "Jansh Brown",
-    product: "Kitchen Storage",
-    amount: 149.0,
-    vendor: "Micro Design",
-    status: "Pending",
+    product: "mohammed",
+
+    vendor: "22-5-2024",
+    status: "medium",
     statusClass: "warning",
-    rating: 4.5,
-    votes: "61",
-    Attachment: "--",
+    rating: 4,
+
     Status: "--",
-    time: "--",
+    time: "6:00 PM",
   },
   {
     id: 3,
     orderId: "#VZ2109",
-    img: avatar3,
     name: "Ayaan Bowen",
-    product: "Bike Accessories",
-    amount: 215.0,
-    vendor: "Nesta Technologies",
-    status: "Paid",
+    product: "mohammed",
+
+    vendor: "22-5-2024",
+    status: "High",
     statusClass: "success",
-    rating: 4.9,
-    votes: "89",
-    Attachment: "--",
+    rating: 6,
+
     Status: "--",
-    time: "--",
+    time: "6:00 PM",
   },
   {
     id: 4,
     orderId: "#VZ2108",
-    img: avatar4,
     name: "Prezy Mark",
-    product: "Furniture",
-    amount: 199.0,
-    vendor: "Syntyce Solutions",
-    status: "Unpaid",
+    product: "mohammed",
+
+    vendor: "22-5-2024",
+    status: "Normal",
     statusClass: "danger",
-    rating: 4.3,
-    votes: "47",
-    Attachment: "--",
+    rating: 4,
+
     Status: "--",
-    time: "--",
+    time: "6:00 PM",
   },
   {
     id: 5,
     orderId: "#VZ2107",
-    img: avatar6,
     name: "Vihan Hudda",
-    product: "Bags and Wallets",
-    amount: 330.0,
-    vendor: "iTest Factory",
-    status: "Paid",
+    product: "mohammed",
+
+    vendor: "22-5-2024",
+    status: "High",
     statusClass: "success",
-    rating: 4.7,
-    votes: "161",
-    Attachment: "--",
+    rating: 4,
+
     Status: "--",
-    time: "--",
+    time: "6:00 PM",
   },
 ];
 const topLocations = [
@@ -632,19 +741,33 @@ const topCategories = [
 ];
 
 // Revenue Chart Data
-const allRevenueData = [
+const allAttendanceRevenueData = [
   {
     name: "present",
     type: "area",
-    data: [34, 65, 46, 68, 49, 61, 42, 44, 78, 52, 63, 67],
+    data: [34, 65, 46, 68, 49, 61],
   },
   {
     name: "present awaiting clock",
     type: "bar",
-    data: [
-      89.25, 98.58, 68.74, 108.87, 77.54, 84.03, 51.24, 28.57, 92.57, 42.36,
-      88.51, 36.57,
-    ],
+    data: [89.25, 98.58, 68.74, 108.87, 77.54, 84.03],
+  },
+  // {
+  //   name: "Zone 3",
+  //   type: "line",
+  //   data: [8, 12, 7, 17, 21, 11, 5, 9, 7, 29, 12, 35],
+  // },
+];
+const allRevenueData = [
+  {
+    name: "present",
+    type: "area",
+    data: [34, 65, 46, 68, 49, 61],
+  },
+  {
+    name: "present awaiting clock",
+    type: "bar",
+    data: [89.25, 98.58, 68.74, 108.87, 77.54, 84.03],
   },
   // {
   //   name: "Zone 3",
@@ -731,5 +854,8 @@ export {
   userInformation,
   newWidgets,
   topLocations,
-  feedback
+  feedback,
+  teamManagement,
+  allAttendanceRevenueData,
+  metricsReport
 };

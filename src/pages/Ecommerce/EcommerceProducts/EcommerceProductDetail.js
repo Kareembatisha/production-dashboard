@@ -115,8 +115,7 @@ const PricingWidgetList = (props) => {
 };
 
 function EcommerceProductDetail(props) {
-  document.title =
-    "Product Details | Velzon - React Admin & Dashboard Template";
+  document.title ="Product Details ";
 
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [ttop, setttop] = useState(false);

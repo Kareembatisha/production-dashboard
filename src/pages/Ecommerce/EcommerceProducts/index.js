@@ -50,7 +50,7 @@ const SingleOptions = [
 ];
 
 const EcommerceProducts = () => {
-  document.title = "Products | Velzon - React Admin & Dashboard Template";
+  document.title = "Products ";
 
   const dispatch = useDispatch();
 

@@ -17,10 +17,9 @@ import {
   DialogContent,
   DialogTitle,
 } from "@mui/material";
-import TableContainerComponent from "../../Components/Common/TableContainerReactTable";
+import TableContainerComponent from "./TableContainerReactTable";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   Title,
@@ -225,6 +224,8 @@ function RolePage() {
               display: "flex",
               flexDirection: { xs: "column", sm: "row" },
               gap: 1,
+              alignItems:"center",
+              justifyContent:"center"
             }}
           >
             <Button
@@ -250,7 +251,7 @@ function RolePage() {
               color="info"
               size="small"
             >
-              View Permissions
+              View 
             </Button>
           </Box>
         ),

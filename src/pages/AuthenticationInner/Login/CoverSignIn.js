@@ -4,7 +4,7 @@ import { Card, Col, Container, Input, Label, Row, Button } from "reactstrap";
 import AuthSlider from "../authCarousel";
 
 const CoverSignIn = () => {
-  document.title = "Cover SignIn  | Velzon - React Admin & Dashboard Template";
+  document.title = "Cover SignIn  ";
 
   return (
     <React.Fragment>

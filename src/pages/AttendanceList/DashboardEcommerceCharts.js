@@ -46,20 +46,7 @@ const RevenueCharts = ({ dataColors, series }) => {
       },
     },
     xaxis: {
-      categories: [
-        "zone 1",
-        "zone 2",
-        "zone 3",
-        "zone 4",
-        "zone 5",
-        "zone 6",
-        "zone 7",
-        "zone 8",
-        "zone 9",
-        "zone 10",
-        "zone 11",
-        "zone 12",
-      ],
+      categories: [],
       axisTicks: {
         show: false,
       },
@@ -69,7 +56,7 @@ const RevenueCharts = ({ dataColors, series }) => {
     },
     yaxis: {
       labels: {
-        formatter: (value) => `${value}%`, // Format y-axis labels as percentages
+        formatter: (value) => `${value}`, // Format y-axis labels as percentages
       },
     },
     grid: {
@@ -113,7 +100,7 @@ const RevenueCharts = ({ dataColors, series }) => {
         formatter: function (value) {
           if (typeof value !== "undefined") {
             const percentage = seriesPercentages[seriesIndex]?.[0] ?? 0; // Adjust as needed
-            return percentage + "%";
+            return percentage + "";
           }
           return value;
         },

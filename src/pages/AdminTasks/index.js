@@ -57,7 +57,7 @@ const statuses = ["Pending", "In Progress", "Completed", "Cancelled"];
 const zones = ["Zone 1", "Zone 2", "Zone 3"];
 
 const Calender = () => {
-  document.title = "Calendar | Velzon - React Admin & Dashboard Template";
+  document.title = "Admin tasks ";
 
   const dispatch = useDispatch();
   const [event, setEvent] = useState({});

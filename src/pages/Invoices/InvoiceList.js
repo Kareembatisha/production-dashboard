@@ -38,7 +38,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { createSelector } from "reselect";
 
 const InvoiceList = () => {
-  document.title = "Invoice List | Velzon - React Admin & Dashboard Template";
+  document.title = "Invoice List ";
 
   const dispatch = useDispatch();
 
